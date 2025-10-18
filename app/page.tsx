@@ -1,37 +1,86 @@
 "use client";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import { Snackbar, Alert } from "@mui/material";
 import { motion } from "framer-motion";
 
 export default function CrosswordDangMui() {
   const words = [
     { 
-      text: "ĐƯỜNGCÁCHMỆNH", 
+      text: "ĐẢNGLAOđộngviệtnam", 
       letterIndex: 0, 
       letter: "Đ",
-      hint: "Phong trào do Nguyễn Ái Quốc thành lập năm 1925 tại Quảng Châu",
-      image: "https://images.unsplash.com/photo-1528127269322-539801943592?w=400"
+      hint: "Tên chính thức của Đảng Cộng sản Việt Nam từ năm 1951-1976",
+      image: "https://images.unsplash.com/photo-1590642916589-592bca10dfbf?w=400"
     },
     { 
-      text: "VÔSẢN", 
-      letterIndex: 3, // Sửa từ 3 thành 2 (V-Ô-S-Ả-N, chữ Ả ở vị trí 3 (index 2))
+      text: "NGUYỄNÁIQUỐC", 
+      letterIndex: 5, 
       letter: "Ả",
-      hint: "Giai cấp công nhân, người lao động không có tư liệu sản xuất",
-      image: "https://images.unsplash.com/photo-1580757468214-c73f7062a5cb?w=400"
+      hint: "Tên ban đầu của Chủ tịch Hồ Chí Minh",
+      image: "https://images.unsplash.com/photo-1509114397022-ed747cca3f65?w=400"
     },
     { 
-      text: "HỒNGKÔNG", 
-      letterIndex: 4, // Sửa từ 3 thành 4 (H-Ồ-N-G-K-Ô-N-G, chữ K ở vị trí 5 (index 4))
+      text: "GIAIẤPCÔNGNHÂN", 
+      letterIndex: 4, 
       letter: "N",
-      hint: "Nơi Bác Hồ bị thực dân Pháp bắt giam năm 1931",
-      image: "https://images.unsplash.com/photo-1536599424071-0f1fa8f7e490?w=400"
-    },
-    { 
-      text: "CÔNGNHÂN", 
-      letterIndex: 3, // Sửa từ 4 thành 3 (C-Ô-N-G-N-H-Â-N, chữ G ở vị trí 4 (index 3))
-      letter: "G",
       hint: "Giai cấp lãnh đạo cách mạng Việt Nam",
       image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400"
+    },
+    { 
+      text: "GIẢIPHÓNGDÂNTỘC", 
+      letterIndex: 5, 
+      letter: "G",
+      hint: "Nhiệm vụ trước mắt của cách mạng Việt Nam trước năm 1945",
+      image: "https://images.unsplash.com/photo-1590642916746-7efa043a1333?w=400"
+    },
+    { 
+      text: "CHỦNGHĨAMÁCLÊNIN", 
+      letterIndex: 8, 
+      letter: "C",
+      hint: "Nền tảng tư tưởng của Đảng Cộng sản Việt Nam",
+      image: "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=400"
+    },
+    { 
+      text: "QUỐCTẾCỘNGSẢN", 
+      letterIndex: 7, 
+      letter: "Ô",
+      hint: "Tổ chức quốc tế của các Đảng Cộng sản do Lenin thành lập năm 1919",
+      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400"
+    },
+    { 
+      text: "NHÂNDÂN", 
+      letterIndex: 4, 
+      letter: "N",
+      hint: "Chủ thể của cách mạng, người làm chủ đất nước",
+      image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400"
+    },
+    { 
+      text: "GIAIẤP", 
+      letterIndex: 4, 
+      letter: "G",
+      hint: "Nhóm người có cùng địa vị trong xã hội về mặt kinh tế",
+      image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?w=400"
+    },
+    { 
+      text: "ĐÔNGDƯƠNGCỘNGSẢNĐẢNG", 
+      letterIndex: 13, 
+      letter: "S",
+      hint: "Tên Đảng từ năm 1930-1951, được thành lập ngày 3/2/1930",
+      image: "https://images.unsplash.com/photo-1532375810709-75b1da00537c?w=400"
+    },
+    { 
+      text: "CÁCHMẠNGTHÁNG10NGA", 
+      letterIndex: 12, 
+      letter: "Ả",
+      hint: "Cuộc cách mạng xã hội chủ nghĩa đầu tiên thành công năm 1917",
+      image: "https://images.unsplash.com/photo-1547448415-e9f5b28e570d?w=400"
+    },
+    { 
+      text: "CHỦNGHĨAXÃHỘI", 
+      letterIndex: 8, 
+      letter: "N",
+      hint: "Chế độ xã hội mà nhân dân lao động làm chủ tập thể",
+      image: "https://images.unsplash.com/photo-1569025743873-ea3a9ade89f9?w=400"
     },
   ];
 
@@ -174,8 +223,8 @@ export default function CrosswordDangMui() {
     });
     const keyword = verticalWord.join("").normalize("NFC");
 
-    if (keyword === "ĐẢNG") {
-      setSnack({ open: true, message: `🎉 Chính xác! Từ khóa dọc là: ${keyword} 🇻🇳`, severity: "success" });
+    if (keyword === "ĐẢNGCỘNGSẢN") {
+      setSnack({ open: true, message: `🎉 Chính xác! Từ khóa dọc là: ĐẢNG CỘNG SẢN 🇻🇳`, severity: "success" });
     } else {
       setSnack({
         open: true,
@@ -219,25 +268,25 @@ export default function CrosswordDangMui() {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3 }}
       >
-        Tìm từ khóa dọc liên quan đến tổ chức lãnh đạo cách mạng Việt Nam
+        Tìm từ khóa dọc: ĐẢNG CỘNG SẢN
       </motion.p>
 
-      <div className="flex flex-col gap-6 max-w-5xl w-full">
+      <div className="flex flex-col gap-6 max-w-6xl w-full">
         {words.map((w, rIdx) => (
           <motion.div
             key={rIdx}
             className="flex flex-col md:flex-row items-center gap-4 bg-white/10 backdrop-blur-sm p-4 rounded-xl shadow-lg"
             initial={{ x: rIdx % 2 === 0 ? -100 : 100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            transition={{ delay: rIdx * 0.2, type: "spring" }}
-            whileHover={{ scale: 1.02 }}
+            transition={{ delay: rIdx * 0.1, type: "spring" }}
+            whileHover={{ scale: 1.01 }}
           >
             <div className="flex items-center gap-3 flex-1 min-w-0 w-full">
-              <div className="w-10 h-10 bg-yellow-400 text-red-900 rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0">
+              <div className="w-10 h-10 bg-yellow-400 text-red-900 rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">
                 {rIdx + 1}
               </div>
 
-              <div className="flex items-center gap-2 justify-center md:justify-start flex-wrap flex-1">
+              <div className="flex items-center gap-1 justify-center md:justify-start flex-wrap flex-1">
                 {Array.from(w.text).map((_, cIdx) => (
                   <motion.input
                     key={cIdx}
@@ -251,7 +300,7 @@ export default function CrosswordDangMui() {
                     onKeyDown={(e) => handleKeyDown(rIdx, cIdx, e)}
                     onFocus={() => handleFocus(rIdx)}
                     onBlur={() => setFocusedRow(null)}
-                    className={`w-10 h-10 text-center font-bold uppercase border-2 rounded-md transition-all
+                    className={`w-9 h-9 text-center font-bold uppercase border-2 rounded-md transition-all text-sm
                       ${
                         cIdx === w.letterIndex
                           ? "bg-yellow-300 border-yellow-500 text-red-800 shadow-lg"
@@ -264,14 +313,14 @@ export default function CrosswordDangMui() {
                           ? "bg-red-200 border-red-500 text-red-900"
                           : ""
                       }`}
-                    whileFocus={{ scale: 1.15, rotate: 2 }}
+                    whileFocus={{ scale: 1.1, rotate: 2 }}
                     whileHover={{ scale: 1.05 }}
                   />
                 ))}
 
                 <motion.button
                   onClick={() => checkRow(rIdx)}
-                  className="px-4 py-2 bg-yellow-400 text-red-900 font-semibold rounded-lg hover:bg-yellow-300 transition shadow-md ml-2"
+                  className="px-3 py-2 bg-yellow-400 text-red-900 font-semibold rounded-lg hover:bg-yellow-300 transition shadow-md ml-2 text-sm"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -307,7 +356,7 @@ export default function CrosswordDangMui() {
           {/* Popup Content */}
           <div className="fixed inset-0 z-50 flex items-center justify-center p-4 pointer-events-none">
             <div 
-              className="bg-gradient-to-br from-yellow-400 to-orange-500 rounded-2xl p-6 shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-auto pointer-events-auto"
+              className="bg-gradient-to-br from-yellow-400 to-orange-500 rounded-2xl p-6 shadow-2xl max-w-3xl w-full max-h-[90vh] overflow-auto pointer-events-auto"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Header với nút đóng */}
@@ -359,7 +408,7 @@ export default function CrosswordDangMui() {
               {/* Ô nhập */}
               <div className="bg-white/90 p-4 rounded-xl">
                 <p className="text-red-900 font-bold mb-3 text-center">Nhập câu trả lời:</p>
-                <div className="flex items-center gap-2 justify-center flex-wrap mb-4">
+                <div className="flex items-center gap-1 justify-center flex-wrap mb-4">
                   {Array.from(words[currentRowIndex].text).map((_, cIdx) => (
                     <input
                       key={cIdx}
@@ -371,7 +420,7 @@ export default function CrosswordDangMui() {
                       onChange={(e) => handlePopupChange(currentRowIndex, cIdx, e.target.value)}
                       onKeyDown={(e) => handlePopupKeyDown(currentRowIndex, cIdx, e)}
                       autoFocus={cIdx === 0}
-                      className={`w-12 h-12 text-center font-bold uppercase border-2 rounded-md text-lg focus:outline-none focus:ring-2 focus:ring-red-500
+                      className={`w-10 h-10 text-center font-bold uppercase border-2 rounded-md text-base focus:outline-none focus:ring-2 focus:ring-red-500
                         ${
                           cIdx === words[currentRowIndex].letterIndex
                             ? "bg-yellow-300 border-yellow-600 text-red-800 shadow-lg"
@@ -413,7 +462,7 @@ export default function CrosswordDangMui() {
       <Snackbar
         open={snack.open}
         autoHideDuration={3000}
-        onClose={() => setSnack({ ...snack, open: false })}
+        onClose={() => setSnack({ ...snack, open: false})}
         anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
       >
         <Alert onClose={() => setSnack({ ...snack, open: false })} severity={snack.severity} variant="filled">
