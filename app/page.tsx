@@ -6,80 +6,80 @@ import { motion } from "framer-motion";
 export default function CrosswordDangMui() {
   const words = [
     { 
-      text: "ĐẢNGLAOđộngviệtnam", 
+      text: "ĐẢNGLAOĐỘNGVIỆTNAM", 
       letterIndex: 0, 
       letter: "Đ",
-      hint: "Tên chính thức của Đảng Cộng sản Việt Nam từ năm 1951-1976",
+      hint: "Tên gọi công khai của Đảng ở Việt Nam sau Đại hội II (1951)",
       image: "https://images.unsplash.com/photo-1590642916589-592bca10dfbf?w=400"
     },
     { 
-      text: "NGUYỄNÁIQUỐC", 
-      letterIndex: 5, 
-      letter: "Ả",
-      hint: "Tên ban đầu của Chủ tịch Hồ Chí Minh",
-      image: "https://images.unsplash.com/photo-1509114397022-ed747cca3f65?w=400"
-    },
-    { 
-      text: "GIAIẤPCÔNGNHÂN", 
-      letterIndex: 4, 
-      letter: "N",
-      hint: "Giai cấp lãnh đạo cách mạng Việt Nam",
-      image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400"
-    },
-    { 
       text: "GIẢIPHÓNGDÂNTỘC", 
-      letterIndex: 5, 
-      letter: "G",
-      hint: "Nhiệm vụ trước mắt của cách mạng Việt Nam trước năm 1945",
+      letterIndex: 2, 
+      letter: "Ả",
+      hint: "Sự nghiệp cơ bản nhất của Cách mạng Tháng Tám năm 1945",
       image: "https://images.unsplash.com/photo-1590642916746-7efa043a1333?w=400"
     },
     { 
-      text: "CHỦNGHĨAMÁCLÊNIN", 
-      letterIndex: 8, 
+      text: "GIAICẤPCÔNGNHÂN", 
+      letterIndex: 11, 
+      letter: "N",
+      hint: "Lực lượng xã hội được Đảng xác định là đội tiên phong của cách mạng",
+      image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400"
+    },
+    { 
+      text: "NGUYỄNÁIQUỐC", 
+      letterIndex: 1, 
+      letter: "G",
+      hint: "Người đã tìm ra con đường cứu nước và chuẩn bị các điều kiện thành lập Đảng",
+      image: "https://images.unsplash.com/photo-1509114397022-ed747cca3f65?w=400"
+    },
+    { 
+      text: "CHỦNGHĨAMÁC-LÊNIN", 
+      letterIndex: 10, 
       letter: "C",
-      hint: "Nền tảng tư tưởng của Đảng Cộng sản Việt Nam",
+      hint: "Nền tảng tư tưởng thứ nhất được Đảng lấy làm kim chỉ nam cho hành động",
       image: "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=400"
     },
     { 
       text: "QUỐCTẾCỘNGSẢN", 
       letterIndex: 7, 
-      letter: "Ô",
-      hint: "Tổ chức quốc tế của các Đảng Cộng sản do Lenin thành lập năm 1919",
+      letter: "Ộ",
+      hint: "Tổ chức quốc tế đã truyền bá và hỗ trợ phong trào cộng sản",
       image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400"
     },
     { 
       text: "NHÂNDÂN", 
-      letterIndex: 4, 
+      letterIndex: 0, 
       letter: "N",
-      hint: "Chủ thể của cách mạng, người làm chủ đất nước",
+      hint: "Chủ trương 'dân biết, dân bàn, dân làm, dân kiểm tra' thể hiện quyền làm chủ của...",
       image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400"
     },
     { 
-      text: "GIAIẤP", 
-      letterIndex: 4, 
+      text: "GIAICẤP", 
+      letterIndex: 0, 
       letter: "G",
-      hint: "Nhóm người có cùng địa vị trong xã hội về mặt kinh tế",
+      hint: "Trong xã hội Việt Nam thời kỳ trước khi có Đảng, các… cũ phân hóa, các…, tầng lớp mới xuất hiện",
       image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?w=400"
     },
     { 
       text: "ĐÔNGDƯƠNGCỘNGSẢNĐẢNG", 
       letterIndex: 13, 
       letter: "S",
-      hint: "Tên Đảng từ năm 1930-1951, được thành lập ngày 3/2/1930",
+      hint: "Tổ chức cộng sản đầu tiên ở Việt Nam được thành lập tại Hà Nội vào tháng 6/1929",
       image: "https://images.unsplash.com/photo-1532375810709-75b1da00537c?w=400"
     },
     { 
-      text: "CÁCHMẠNGTHÁNG10NGA", 
-      letterIndex: 12, 
+      text: "TÂNVIỆTCÁCHMẠNGĐẢNG", 
+      letterIndex: 16,
       letter: "Ả",
-      hint: "Cuộc cách mạng xã hội chủ nghĩa đầu tiên thành công năm 1917",
+      hint: "Đông Dương Cộng Sản Liên Đoàn có xuất thân từ đây",
       image: "https://images.unsplash.com/photo-1547448415-e9f5b28e570d?w=400"
     },
     { 
       text: "CHỦNGHĨAXÃHỘI", 
-      letterIndex: 8, 
+      letterIndex: 3,
       letter: "N",
-      hint: "Chế độ xã hội mà nhân dân lao động làm chủ tập thể",
+      hint: "Mục tiêu chiến lược mà cách mạng phải đi tới sau độc lập dân tộc",
       image: "https://images.unsplash.com/photo-1569025743873-ea3a9ade89f9?w=400"
     },
   ];
@@ -268,7 +268,7 @@ export default function CrosswordDangMui() {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3 }}
       >
-        Tìm từ khóa dọc: ĐẢNG CỘNG SẢN
+        Tìm từ khóa dọc
       </motion.p>
 
       <div className="flex flex-col gap-6 max-w-6xl w-full">
@@ -303,7 +303,7 @@ export default function CrosswordDangMui() {
                     className={`w-9 h-9 text-center font-bold uppercase border-2 rounded-md transition-all text-sm
                       ${
                         cIdx === w.letterIndex
-                          ? "bg-yellow-300 border-yellow-500 text-red-800 shadow-lg"
+                          ? "bg-yellow-300 border-yellow-500 text-red-800 shadow-lg ring-2 ring-yellow-400"
                           : "bg-yellow-100 border-yellow-400 text-red-900"
                       }
                       ${
@@ -356,7 +356,7 @@ export default function CrosswordDangMui() {
           {/* Popup Content */}
           <div className="fixed inset-0 z-50 flex items-center justify-center p-4 pointer-events-none">
             <div 
-              className="bg-gradient-to-br from-yellow-400 to-orange-500 rounded-2xl p-6 shadow-2xl max-w-3xl w-full max-h-[90vh] overflow-auto pointer-events-auto"
+              className="bg-gradient-to-br from-yellow-400 to-orange-500 rounded-2xl p-6 shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-auto pointer-events-auto"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Header với nút đóng */}
@@ -374,13 +374,13 @@ export default function CrosswordDangMui() {
               </div>
 
               {/* Hình ảnh */}
-              <div className="w-full h-48 rounded-xl overflow-hidden mb-4 shadow-lg">
+              {/* <div className="w-full h-48 rounded-xl overflow-hidden mb-4 shadow-lg">
                 <img
                   src={words[currentRowIndex].image}
                   alt={`Gợi ý ${currentRowIndex + 1}`}
                   className="w-full h-full object-cover"
                 />
-              </div>
+              </div> */}
 
               {/* Nút và gợi ý */}
               <div className="mb-4">
@@ -423,7 +423,7 @@ export default function CrosswordDangMui() {
                       className={`w-10 h-10 text-center font-bold uppercase border-2 rounded-md text-base focus:outline-none focus:ring-2 focus:ring-red-500
                         ${
                           cIdx === words[currentRowIndex].letterIndex
-                            ? "bg-yellow-300 border-yellow-600 text-red-800 shadow-lg"
+                            ? "bg-yellow-300 border-yellow-600 text-red-800 shadow-lg ring-2 ring-yellow-500"
                             : "bg-white border-gray-400 text-red-900"
                         }
                         ${
@@ -462,7 +462,7 @@ export default function CrosswordDangMui() {
       <Snackbar
         open={snack.open}
         autoHideDuration={3000}
-        onClose={() => setSnack({ ...snack, open: false})}
+        onClose={() => setSnack({ ...snack, open: false })}
         anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
       >
         <Alert onClose={() => setSnack({ ...snack, open: false })} severity={snack.severity} variant="filled">
